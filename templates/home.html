@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1>Hello, {{ user.first_name }}!</h1>
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+<h1>Are you ready?</h1>
+<p>Please enter the 5-digit code found on the invite below.</p>
+<a href="#"><p>Review Puzzle</p></a>
+
+<div id="puzzle-input">
+
+</div>
+
+<div>
+    <h3>Give me a <a href="">hint</a>.</h3>
+</div>
+
+<div>
+    <h3>Already a VIP?</h3>
+    <a href="{% url 'login' %}">Log In</a> |
+    <a href="{% url 'signup' %}">Sign Up</a>
+</div>
+{% endif %}
+{% endblock content %}
