@@ -11,35 +11,155 @@
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/index.html",
       "publicPath": "http://localhost:3000/index.html"
     },
-    "main.51f2edd5518166626484.hot-update.js": {
-      "name": "main.51f2edd5518166626484.hot-update.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.js",
-      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.js"
+    "main.5684c52b5f952838b8b9.hot-update.js": {
+      "name": "main.5684c52b5f952838b8b9.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5684c52b5f952838b8b9.hot-update.js",
+      "publicPath": "http://localhost:3000/main.5684c52b5f952838b8b9.hot-update.js"
     },
-    "main.51f2edd5518166626484.hot-update.js.map": {
-      "name": "main.51f2edd5518166626484.hot-update.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.js.map",
-      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.js.map"
+    "main.5684c52b5f952838b8b9.hot-update.js.map": {
+      "name": "main.5684c52b5f952838b8b9.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5684c52b5f952838b8b9.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.5684c52b5f952838b8b9.hot-update.js.map"
     },
-    "main.51f2edd5518166626484.hot-update.json": {
-      "name": "main.51f2edd5518166626484.hot-update.json",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.json",
-      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.json"
+    "main.5684c52b5f952838b8b9.hot-update.json": {
+      "name": "main.5684c52b5f952838b8b9.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5684c52b5f952838b8b9.hot-update.json",
+      "publicPath": "http://localhost:3000/main.5684c52b5f952838b8b9.hot-update.json"
     },
-    "main.87d24f4bb80abadee404.hot-update.js": {
-      "name": "main.87d24f4bb80abadee404.hot-update.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.js",
-      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.js"
+    "main.5b04384af4180c26cb39.hot-update.js": {
+      "name": "main.5b04384af4180c26cb39.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5b04384af4180c26cb39.hot-update.js",
+      "publicPath": "http://localhost:3000/main.5b04384af4180c26cb39.hot-update.js"
     },
-    "main.87d24f4bb80abadee404.hot-update.js.map": {
-      "name": "main.87d24f4bb80abadee404.hot-update.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.js.map",
-      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.js.map"
+    "main.5b04384af4180c26cb39.hot-update.js.map": {
+      "name": "main.5b04384af4180c26cb39.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5b04384af4180c26cb39.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.5b04384af4180c26cb39.hot-update.js.map"
     },
-    "main.87d24f4bb80abadee404.hot-update.json": {
-      "name": "main.87d24f4bb80abadee404.hot-update.json",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.json",
-      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.json"
+    "main.5b04384af4180c26cb39.hot-update.json": {
+      "name": "main.5b04384af4180c26cb39.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.5b04384af4180c26cb39.hot-update.json",
+      "publicPath": "http://localhost:3000/main.5b04384af4180c26cb39.hot-update.json"
+    },
+    "main.615159194d085acc9fd9.hot-update.js": {
+      "name": "main.615159194d085acc9fd9.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.615159194d085acc9fd9.hot-update.js",
+      "publicPath": "http://localhost:3000/main.615159194d085acc9fd9.hot-update.js"
+    },
+    "main.615159194d085acc9fd9.hot-update.js.map": {
+      "name": "main.615159194d085acc9fd9.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.615159194d085acc9fd9.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.615159194d085acc9fd9.hot-update.js.map"
+    },
+    "main.615159194d085acc9fd9.hot-update.json": {
+      "name": "main.615159194d085acc9fd9.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.615159194d085acc9fd9.hot-update.json",
+      "publicPath": "http://localhost:3000/main.615159194d085acc9fd9.hot-update.json"
+    },
+    "main.667844c0bb71b0160ec9.hot-update.js": {
+      "name": "main.667844c0bb71b0160ec9.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.667844c0bb71b0160ec9.hot-update.js",
+      "publicPath": "http://localhost:3000/main.667844c0bb71b0160ec9.hot-update.js"
+    },
+    "main.667844c0bb71b0160ec9.hot-update.js.map": {
+      "name": "main.667844c0bb71b0160ec9.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.667844c0bb71b0160ec9.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.667844c0bb71b0160ec9.hot-update.js.map"
+    },
+    "main.667844c0bb71b0160ec9.hot-update.json": {
+      "name": "main.667844c0bb71b0160ec9.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.667844c0bb71b0160ec9.hot-update.json",
+      "publicPath": "http://localhost:3000/main.667844c0bb71b0160ec9.hot-update.json"
+    },
+    "main.727a39e0f5fafe6fb6a9.hot-update.js": {
+      "name": "main.727a39e0f5fafe6fb6a9.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.727a39e0f5fafe6fb6a9.hot-update.js",
+      "publicPath": "http://localhost:3000/main.727a39e0f5fafe6fb6a9.hot-update.js"
+    },
+    "main.727a39e0f5fafe6fb6a9.hot-update.js.map": {
+      "name": "main.727a39e0f5fafe6fb6a9.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.727a39e0f5fafe6fb6a9.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.727a39e0f5fafe6fb6a9.hot-update.js.map"
+    },
+    "main.727a39e0f5fafe6fb6a9.hot-update.json": {
+      "name": "main.727a39e0f5fafe6fb6a9.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.727a39e0f5fafe6fb6a9.hot-update.json",
+      "publicPath": "http://localhost:3000/main.727a39e0f5fafe6fb6a9.hot-update.json"
+    },
+    "main.b15b62bfd0429d27e39f.hot-update.js": {
+      "name": "main.b15b62bfd0429d27e39f.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b15b62bfd0429d27e39f.hot-update.js",
+      "publicPath": "http://localhost:3000/main.b15b62bfd0429d27e39f.hot-update.js"
+    },
+    "main.b15b62bfd0429d27e39f.hot-update.js.map": {
+      "name": "main.b15b62bfd0429d27e39f.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b15b62bfd0429d27e39f.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.b15b62bfd0429d27e39f.hot-update.js.map"
+    },
+    "main.b15b62bfd0429d27e39f.hot-update.json": {
+      "name": "main.b15b62bfd0429d27e39f.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b15b62bfd0429d27e39f.hot-update.json",
+      "publicPath": "http://localhost:3000/main.b15b62bfd0429d27e39f.hot-update.json"
+    },
+    "main.bac2a42bc0833c34d450.hot-update.js": {
+      "name": "main.bac2a42bc0833c34d450.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.bac2a42bc0833c34d450.hot-update.js",
+      "publicPath": "http://localhost:3000/main.bac2a42bc0833c34d450.hot-update.js"
+    },
+    "main.bac2a42bc0833c34d450.hot-update.js.map": {
+      "name": "main.bac2a42bc0833c34d450.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.bac2a42bc0833c34d450.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.bac2a42bc0833c34d450.hot-update.js.map"
+    },
+    "main.bac2a42bc0833c34d450.hot-update.json": {
+      "name": "main.bac2a42bc0833c34d450.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.bac2a42bc0833c34d450.hot-update.json",
+      "publicPath": "http://localhost:3000/main.bac2a42bc0833c34d450.hot-update.json"
+    },
+    "main.d838519b14153b19164c.hot-update.js": {
+      "name": "main.d838519b14153b19164c.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.d838519b14153b19164c.hot-update.js",
+      "publicPath": "http://localhost:3000/main.d838519b14153b19164c.hot-update.js"
+    },
+    "main.d838519b14153b19164c.hot-update.js.map": {
+      "name": "main.d838519b14153b19164c.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.d838519b14153b19164c.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.d838519b14153b19164c.hot-update.js.map"
+    },
+    "main.d838519b14153b19164c.hot-update.json": {
+      "name": "main.d838519b14153b19164c.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.d838519b14153b19164c.hot-update.json",
+      "publicPath": "http://localhost:3000/main.d838519b14153b19164c.hot-update.json"
+    },
+    "main.e6d40a6a9d0cf38e8699.hot-update.js": {
+      "name": "main.e6d40a6a9d0cf38e8699.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.e6d40a6a9d0cf38e8699.hot-update.js",
+      "publicPath": "http://localhost:3000/main.e6d40a6a9d0cf38e8699.hot-update.js"
+    },
+    "main.e6d40a6a9d0cf38e8699.hot-update.js.map": {
+      "name": "main.e6d40a6a9d0cf38e8699.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.e6d40a6a9d0cf38e8699.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.e6d40a6a9d0cf38e8699.hot-update.js.map"
+    },
+    "main.e6d40a6a9d0cf38e8699.hot-update.json": {
+      "name": "main.e6d40a6a9d0cf38e8699.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.e6d40a6a9d0cf38e8699.hot-update.json",
+      "publicPath": "http://localhost:3000/main.e6d40a6a9d0cf38e8699.hot-update.json"
+    },
+    "main.f5e1562c32fea72cdc67.hot-update.js": {
+      "name": "main.f5e1562c32fea72cdc67.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.f5e1562c32fea72cdc67.hot-update.js",
+      "publicPath": "http://localhost:3000/main.f5e1562c32fea72cdc67.hot-update.js"
+    },
+    "main.f5e1562c32fea72cdc67.hot-update.js.map": {
+      "name": "main.f5e1562c32fea72cdc67.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.f5e1562c32fea72cdc67.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.f5e1562c32fea72cdc67.hot-update.js.map"
+    },
+    "main.f5e1562c32fea72cdc67.hot-update.json": {
+      "name": "main.f5e1562c32fea72cdc67.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.f5e1562c32fea72cdc67.hot-update.json",
+      "publicPath": "http://localhost:3000/main.f5e1562c32fea72cdc67.hot-update.json"
     },
     "static/js/bundle.js": {
       "name": "static/js/bundle.js",
@@ -50,30 +170,13 @@
       "name": "static/js/bundle.js.map",
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/bundle.js.map",
       "publicPath": "http://localhost:3000/static/js/bundle.js.map"
-    },
-    "static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js": {
-      "name": "static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js",
-      "publicPath": "http://localhost:3000/static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js"
-    },
-    "static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js.map": {
-      "name": "static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js.map",
-      "publicPath": "http://localhost:3000/static/js/node_modules_web-vitals_dist_web-vitals_js.chunk.js.map"
-    },
-    "static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg": {
-      "name": "static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-      "publicPath": "http://localhost:3000/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg"
     }
   },
   "chunks": {
     "main": [
       "static/js/bundle.js",
-      "main.51f2edd5518166626484.hot-update.js"
+      "main.727a39e0f5fafe6fb6a9.hot-update.js"
     ]
   },
-  "publicPath": "http://localhost:3000/",
-  "error": "ESLintError",
-  "message": "[eslint] \nsrc/App.js\n  Line 8:19:  'logo' is not defined  no-undef\n\nSearch for the keywords to learn more about each error."
+  "publicPath": "http://localhost:3000/"
 }
