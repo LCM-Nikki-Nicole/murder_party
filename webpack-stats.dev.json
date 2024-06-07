@@ -11,20 +11,35 @@
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/index.html",
       "publicPath": "http://localhost:3000/index.html"
     },
-    "main.411cdfb70524cfc2061b.hot-update.js": {
-      "name": "main.411cdfb70524cfc2061b.hot-update.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.411cdfb70524cfc2061b.hot-update.js",
-      "publicPath": "http://localhost:3000/main.411cdfb70524cfc2061b.hot-update.js"
+    "main.51f2edd5518166626484.hot-update.js": {
+      "name": "main.51f2edd5518166626484.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.js",
+      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.js"
     },
-    "main.411cdfb70524cfc2061b.hot-update.js.map": {
-      "name": "main.411cdfb70524cfc2061b.hot-update.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.411cdfb70524cfc2061b.hot-update.js.map",
-      "publicPath": "http://localhost:3000/main.411cdfb70524cfc2061b.hot-update.js.map"
+    "main.51f2edd5518166626484.hot-update.js.map": {
+      "name": "main.51f2edd5518166626484.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.js.map"
     },
-    "main.411cdfb70524cfc2061b.hot-update.json": {
-      "name": "main.411cdfb70524cfc2061b.hot-update.json",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.411cdfb70524cfc2061b.hot-update.json",
-      "publicPath": "http://localhost:3000/main.411cdfb70524cfc2061b.hot-update.json"
+    "main.51f2edd5518166626484.hot-update.json": {
+      "name": "main.51f2edd5518166626484.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.51f2edd5518166626484.hot-update.json",
+      "publicPath": "http://localhost:3000/main.51f2edd5518166626484.hot-update.json"
+    },
+    "main.87d24f4bb80abadee404.hot-update.js": {
+      "name": "main.87d24f4bb80abadee404.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.js",
+      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.js"
+    },
+    "main.87d24f4bb80abadee404.hot-update.js.map": {
+      "name": "main.87d24f4bb80abadee404.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.js.map"
+    },
+    "main.87d24f4bb80abadee404.hot-update.json": {
+      "name": "main.87d24f4bb80abadee404.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.87d24f4bb80abadee404.hot-update.json",
+      "publicPath": "http://localhost:3000/main.87d24f4bb80abadee404.hot-update.json"
     },
     "static/js/bundle.js": {
       "name": "static/js/bundle.js",
@@ -55,8 +70,10 @@
   "chunks": {
     "main": [
       "static/js/bundle.js",
-      "main.411cdfb70524cfc2061b.hot-update.js"
+      "main.51f2edd5518166626484.hot-update.js"
     ]
   },
-  "publicPath": "http://localhost:3000/"
+  "publicPath": "http://localhost:3000/",
+  "error": "ESLintError",
+  "message": "[eslint] \nsrc/App.js\n  Line 8:19:  'logo' is not defined  no-undef\n\nSearch for the keywords to learn more about each error."
 }
