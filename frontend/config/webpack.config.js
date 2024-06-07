@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -84,6 +84,8 @@ const hasJsxRuntime = (() => {
     return false;
   }
 })();
+
+const BundleTracker = require('webpack-bundle-tracker');
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -200,7 +202,13 @@ module.exports = function (webpackEnv) {
       : isEnvDevelopment && 'cheap-module-source-map',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
-    entry: paths.appIndexJs,
+    entry: [
+      // ... KEEP OTHER VALUES
+      require.resolve('webpack-dev-server/client') + '?http://localhost:3000',
+      require.resolve('webpack/hot/dev-server'),
+      // require.resolve('react-dev-utils/webpackHotDevClient'),
+      paths.appIndexJs,
+    ],
     output: {
       // The build folder.
       path: paths.appBuild,
@@ -219,7 +227,7 @@ module.exports = function (webpackEnv) {
       // webpack uses `publicPath` to determine where the app is being served from.
       // It requires a trailing slash, or the file assets will get an incorrect path.
       // We inferred the "public path" (such as / or /my-project) from homepage.
-      publicPath: paths.publicUrlOrPath,
+      publicPath: 'http://localhost:3000/',
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: isEnvProduction
         ? info =>
@@ -419,7 +427,7 @@ module.exports = function (webpackEnv) {
                     },
                   ],
                 ],
-                
+
                 plugins: [
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
@@ -453,7 +461,7 @@ module.exports = function (webpackEnv) {
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                
+
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.
@@ -636,7 +644,7 @@ module.exports = function (webpackEnv) {
       //   can be used to reconstruct the HTML if necessary
       new WebpackManifestPlugin({
         fileName: 'asset-manifest.json',
-        publicPath: paths.publicUrlOrPath,
+        publicPath: 'http://localhost:3000/',
         generate: (seed, files, entrypoints) => {
           const manifestFiles = files.reduce((manifest, file) => {
             manifest[file.name] = file.path;
@@ -706,7 +714,6 @@ module.exports = function (webpackEnv) {
             // This one is specifically to match during CI tests,
             // as micromatch doesn't match
             // '../cra-template-typescript/template/src/App.tsx'
-            // otherwise.
             include: [
               { file: '../**/src/**/*.{ts,tsx}' },
               { file: '**/src/**/*.{ts,tsx}' },
@@ -747,6 +754,7 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      new BundleTracker({path: paths.statsRoot, filename: 'webpack-stats.dev.json'}),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
