@@ -1,10 +1,19 @@
 {% extends "base.html" %}
+{% load widget_tweaks %}
+
 {% block title %}Sign Up{% endblock title %}
 
 {% block content %}
-<h2>Sign Up</h2>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
+<h2>Welcome back, VIP Sleuth</h2>
+<p>Access your invite info and character files here.</p>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {% render_field form.first_name placeholder="FIRST NAME" %}
+    </div>
+    <div>
+        {% render_field form.password placeholder="PASSWORD" %}
+    </div>
+    <button type="submit">Log In</button>
 </form>
 {% endblock content %}
