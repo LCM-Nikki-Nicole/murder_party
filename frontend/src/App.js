@@ -1,8 +1,7 @@
-
+import React from 'react';
 import './App.css';
 import { Typography } from '@mui/material';
 import { AccountCreation, HintScreen, LoggedInScreen, Login, SecretCodeEntry } from './components';
-
 
 function App() {
   return (
@@ -10,12 +9,11 @@ function App() {
       <Typography variant="h2">
         Hello world (this is mui)
       </Typography>
-
-      <AccountCreation/>
-      <HintScreen/>
-      <LoggedInScreen/>
-      <Login/>
-      <SecretCodeEntry/>
+      <AccountCreation />
+      <HintScreen />
+      <LoggedInScreen />
+      <Login />
+      <SecretCodeEntry />
     </div>
   );
 }
