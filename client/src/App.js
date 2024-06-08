@@ -1,6 +1,7 @@
 import './App.css';
 import { Home, LandingPage, Login, SecretCodeEntry, Success } from './components';
 import { Route, Routes } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
       <Route path='/SecretCodeEntry' element={<SecretCodeEntry/>}></Route>
       <Route path='/Success' element={<Success/>}></Route>
     </Routes>
-      <p>
+    <Typography variant="h2">
         Hello world (this is mui)
-      </p>
+      </Typography>
     </div>
   );
 }
