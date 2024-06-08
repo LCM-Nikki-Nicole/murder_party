@@ -11,51 +11,36 @@
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/index.html",
       "publicPath": "http://localhost:3000/index.html"
     },
-    "main.57ec6416e65fcaef02ab.hot-update.js": {
-      "name": "main.57ec6416e65fcaef02ab.hot-update.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.js",
-      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.js"
+    "static/css/main.dc4d6ff2.css": {
+      "name": "static/css/main.dc4d6ff2.css",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/css/main.dc4d6ff2.css",
+      "publicPath": "http://localhost:3000/static/css/main.dc4d6ff2.css"
     },
-    "main.57ec6416e65fcaef02ab.hot-update.js.map": {
-      "name": "main.57ec6416e65fcaef02ab.hot-update.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.js.map",
-      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.js.map"
+    "static/css/main.dc4d6ff2.css.map": {
+      "name": "static/css/main.dc4d6ff2.css.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/css/main.dc4d6ff2.css.map",
+      "publicPath": "http://localhost:3000/static/css/main.dc4d6ff2.css.map"
     },
-    "main.57ec6416e65fcaef02ab.hot-update.json": {
-      "name": "main.57ec6416e65fcaef02ab.hot-update.json",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.json",
-      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.json"
+    "static/js/main.ea6fecc6.js": {
+      "name": "static/js/main.ea6fecc6.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/main.ea6fecc6.js",
+      "publicPath": "http://localhost:3000/static/js/main.ea6fecc6.js"
     },
-    "main.b2fa26fae197cf2e6fde.hot-update.js": {
-      "name": "main.b2fa26fae197cf2e6fde.hot-update.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.js",
-      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.js"
+    "static/js/main.ea6fecc6.js.LICENSE.txt": {
+      "name": "static/js/main.ea6fecc6.js.LICENSE.txt",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/main.ea6fecc6.js.LICENSE.txt",
+      "publicPath": "http://localhost:3000/static/js/main.ea6fecc6.js.LICENSE.txt"
     },
-    "main.b2fa26fae197cf2e6fde.hot-update.js.map": {
-      "name": "main.b2fa26fae197cf2e6fde.hot-update.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.js.map",
-      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.js.map"
-    },
-    "main.b2fa26fae197cf2e6fde.hot-update.json": {
-      "name": "main.b2fa26fae197cf2e6fde.hot-update.json",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.json",
-      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.json"
-    },
-    "static/js/bundle.js": {
-      "name": "static/js/bundle.js",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/bundle.js",
-      "publicPath": "http://localhost:3000/static/js/bundle.js"
-    },
-    "static/js/bundle.js.map": {
-      "name": "static/js/bundle.js.map",
-      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/bundle.js.map",
-      "publicPath": "http://localhost:3000/static/js/bundle.js.map"
+    "static/js/main.ea6fecc6.js.map": {
+      "name": "static/js/main.ea6fecc6.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/main.ea6fecc6.js.map",
+      "publicPath": "http://localhost:3000/static/js/main.ea6fecc6.js.map"
     }
   },
   "chunks": {
     "main": [
-      "static/js/bundle.js",
-      "main.b2fa26fae197cf2e6fde.hot-update.js"
+      "static/css/main.dc4d6ff2.css",
+      "static/js/main.ea6fecc6.js"
     ]
   },
   "publicPath": "http://localhost:3000/"
