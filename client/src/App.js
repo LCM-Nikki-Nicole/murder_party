@@ -13,7 +13,7 @@ function App() {
       <Route path='/SecretCodeEntry' element={<SecretCodeEntry/>}></Route>
       <Route path='/Success' element={<Success/>}></Route>
     </Routes>
-    <Typography variant="h2">
+      <Typography variant="h2">
         Hello world (this is mui)
       </Typography>
     </div>
