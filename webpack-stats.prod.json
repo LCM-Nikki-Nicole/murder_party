@@ -1,0 +1,47 @@
+{
+  "status": "done",
+  "assets": {
+    "asset-manifest.json": {
+      "name": "asset-manifest.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/asset-manifest.json",
+      "publicPath": "/static/bundles/asset-manifest.json"
+    },
+    "css/main.dc4d6ff2.css": {
+      "name": "css/main.dc4d6ff2.css",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/css/main.dc4d6ff2.css",
+      "publicPath": "/static/bundles/css/main.dc4d6ff2.css"
+    },
+    "css/main.dc4d6ff2.css.map": {
+      "name": "css/main.dc4d6ff2.css.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/css/main.dc4d6ff2.css.map",
+      "publicPath": "/static/bundles/css/main.dc4d6ff2.css.map"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/index.html",
+      "publicPath": "/static/bundles/index.html"
+    },
+    "js/main.cb424936.js": {
+      "name": "js/main.cb424936.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/js/main.cb424936.js",
+      "publicPath": "/static/bundles/js/main.cb424936.js"
+    },
+    "js/main.cb424936.js.LICENSE.txt": {
+      "name": "js/main.cb424936.js.LICENSE.txt",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/js/main.cb424936.js.LICENSE.txt",
+      "publicPath": "/static/bundles/js/main.cb424936.js.LICENSE.txt"
+    },
+    "js/main.cb424936.js.map": {
+      "name": "js/main.cb424936.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/assets/bundles/js/main.cb424936.js.map",
+      "publicPath": "/static/bundles/js/main.cb424936.js.map"
+    }
+  },
+  "chunks": {
+    "main": [
+      "js/main.cb424936.js",
+      "css/main.dc4d6ff2.css"
+    ]
+  },
+  "publicPath": "/static/bundles/"
+}

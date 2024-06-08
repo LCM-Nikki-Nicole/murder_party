@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/static/bundles/js/main.cb424936.js",
+    "main.css": "/static/bundles/css/main.dc4d6ff2.css",
+    "index.html": "/static/bundles/index.html",
+    "main.cb424936.js.map": "/static/bundles/js/main.cb424936.js.map",
+    "main.dc4d6ff2.css.map": "/static/bundles/css/main.dc4d6ff2.css.map"
+  },
+  "entrypoints": [
+    "js/main.cb424936.js",
+    "css/main.dc4d6ff2.css"
+  ]
+}
