@@ -11,6 +11,36 @@
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/index.html",
       "publicPath": "http://localhost:3000/index.html"
     },
+    "main.57ec6416e65fcaef02ab.hot-update.js": {
+      "name": "main.57ec6416e65fcaef02ab.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.js",
+      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.js"
+    },
+    "main.57ec6416e65fcaef02ab.hot-update.js.map": {
+      "name": "main.57ec6416e65fcaef02ab.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.js.map"
+    },
+    "main.57ec6416e65fcaef02ab.hot-update.json": {
+      "name": "main.57ec6416e65fcaef02ab.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.57ec6416e65fcaef02ab.hot-update.json",
+      "publicPath": "http://localhost:3000/main.57ec6416e65fcaef02ab.hot-update.json"
+    },
+    "main.b2fa26fae197cf2e6fde.hot-update.js": {
+      "name": "main.b2fa26fae197cf2e6fde.hot-update.js",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.js",
+      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.js"
+    },
+    "main.b2fa26fae197cf2e6fde.hot-update.js.map": {
+      "name": "main.b2fa26fae197cf2e6fde.hot-update.js.map",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.js.map",
+      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.js.map"
+    },
+    "main.b2fa26fae197cf2e6fde.hot-update.json": {
+      "name": "main.b2fa26fae197cf2e6fde.hot-update.json",
+      "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/main.b2fa26fae197cf2e6fde.hot-update.json",
+      "publicPath": "http://localhost:3000/main.b2fa26fae197cf2e6fde.hot-update.json"
+    },
     "static/js/bundle.js": {
       "name": "static/js/bundle.js",
       "path": "/Users/nicole/code/noliver-ykc/noliver-ykc/murder_party/frontend/build/static/js/bundle.js",
@@ -24,7 +54,8 @@
   },
   "chunks": {
     "main": [
-      "static/js/bundle.js"
+      "static/js/bundle.js",
+      "main.b2fa26fae197cf2e6fde.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/"
