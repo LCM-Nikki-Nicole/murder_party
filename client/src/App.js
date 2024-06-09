@@ -7,14 +7,12 @@ function App() {
   return (
     <div className="App">
     <Routes>
-      <Route path='' element={<Home/>}></Route>
+      <Route path='/' element={<Home/>}></Route>
       <Route path='/LandingPage' element={<LandingPage/>}></Route>
       <Route path='/Login' element={<Login/>}></Route>
       <Route path='/Success' element={<Success/>}></Route>
     </Routes>
-      <Typography variant="h2">
-        Hello world (this is mui)
-      </Typography>
+      <Typography variant="h2">Hello world (this is custom styled mui)</Typography>
     </div>
   );
 }
