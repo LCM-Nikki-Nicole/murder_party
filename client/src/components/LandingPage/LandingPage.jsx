@@ -139,7 +139,7 @@ function LandingPage() {
         <Subtitle variant="body1">
           Please enter the 5-Digit code found on the invite below.
         </Subtitle>
-        <CustomLink variant="body1" href="#"><strong>Review Puzzle</strong></CustomLink>
+        <CustomLink variant="body1" href="/puzzle001.png" target="_blank"><strong>Review Puzzle</strong></CustomLink>
         <CodeContainer>
           {Array(5).fill().map((_, index) => (
             <CodeInput
