@@ -68,7 +68,15 @@ const theme = createTheme({
           padding: '10px 20px',
           boxShadow: 'none', // No shadow (override mui)
           '&:hover': {
-            backgroundColor: '#393939', // Darker background on hover
+            backgroundColor: '#E5B769', // Darker background on hover
+            color: '#000000',
+            boxShadow: 'none',
+          },
+          '&:focus': {
+            backgroundColor: '#000000', // Ensure background color stays the same on focus
+          },
+          '&:active': {
+            backgroundColor: '#000000', // Ensure background color stays the same on active
             boxShadow: 'none',
           },
         },

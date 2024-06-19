@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography, TextField, Button, Box, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -37,21 +38,24 @@ const CodeContainer = styled(Box)(({ theme }) => ({
   marginTop: '1.5em',
 }));
 
-const CodeInput = styled(TextField)(({ theme }) => ({
+const CodeInput = styled(TextField)(({ theme, error }) => ({
   width: '3.3em',
   height: '4.5em',
   '& .MuiOutlinedInput-root': {
     padding: 0,
+    '& fieldset': {
+      borderColor: error ? theme.palette.custom.red : theme.palette.custom.gold, // Outline color on error
+    },
     '&:hover fieldset': {
-      borderColor: 'white', // Outline color on hover
+      borderColor: error ? theme.palette.custom.red : 'white', // Outline color on hover
     },
     '&.Mui-focused fieldset': {
-      borderColor: 'white', // Outline color when focused
+      borderColor: error ? theme.palette.custom.red : 'white', // Outline color when focused
     },
     '& input': {
       textAlign: 'center',
       fontSize: '1.5em',
-      color: 'white',
+      color: error ? theme.palette.custom.red : 'white',
       padding: '0.5em',
     },
   },
@@ -69,6 +73,15 @@ const SubmitButton = styled(Button)(({ theme }) => ({
   color: theme.palette.primary.main,
   '&:hover': {
     backgroundColor: theme.palette.custom.darkGray,
+    color: theme.palette.secondary.main,
+  },
+  '&:focus': {
+    backgroundColor: theme.palette.custom.gold,
+    color: theme.palette.primary.main,
+  },
+  '&:active': {
+    backgroundColor: theme.palette.custom.gold,
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -78,7 +91,47 @@ const CustomLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
 }));
 
+const ErrorLink = styled(Link)(({ theme }) => ({
+  color: '#C24949',
+  textDecoration: 'underline',
+  cursor: 'pointer',
+}));
+
 function LandingPage() {
+  const [code, setCode] = useState(['', '', '', '', '']);
+  const [error, setError] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+  const navigate = useNavigate();
+
+  const handleChange = (e, index) => {
+    const newCode = [...code];
+    newCode[index] = e.target.value;
+    setCode(newCode);
+    if (error) setError(false);
+  };
+
+  const handleSubmit = async () => {
+    console.log("Submitted code:", code.join(''));
+    const response = await fetch('http://localhost:8000/api/validate-code/', {  // Ensure the correct backend URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code: code.join('') }),
+    });
+    const result = await response.json();
+    console.log("Backend response:", result);
+    if (result.valid) {
+      navigate('/success');
+    } else {
+      setError(true);
+    }
+  };
+
+  const handleRefresh = () => {
+    window.location.reload();
+  };
+
   return (
     <Container>
       <Card>
@@ -86,24 +139,37 @@ function LandingPage() {
         <Subtitle variant="body1">
           Please enter the 5-Digit code found on the invite below.
         </Subtitle>
-        <CustomLink variant="body1" href="#">Review Puzzle</CustomLink>
+        <CustomLink variant="body1" href="#"><strong>Review Puzzle</strong></CustomLink>
         <CodeContainer>
           {Array(5).fill().map((_, index) => (
             <CodeInput
               key={index}
               variant="outlined"
               inputProps={{ maxLength: 1, inputMode: 'numeric', pattern: '[0-9]*' }}
+              value={code[index]}
+              onChange={(e) => handleChange(e, index)}
+              error={error} // Pass the error state to the component
             />
           ))}
         </CodeContainer>
+        {error && (
+          <Subtitle variant="body1" style={{ color: '#C24949' }}>
+            CODE INCORRECT <ErrorLink onClick={handleRefresh}>TRY AGAIN</ErrorLink>
+          </Subtitle>
+        )}
+        {showHint && (
+          <Subtitle variant="body1" style={{ color: '#FFFFFF' }}>
+            ARE YOU READY? THE KEY IS IN THE LETTERS THAT SPELL OUT A CERTAIN 5 LETTER WORD. MATCH THEM WITH THEIR NUMBERS TO UNLOCK THE CODE.
+          </Subtitle>
+        )}
         <Subtitle variant="body1">
-          Haven't solved the invite yet? <CustomLink href="#">Hint</CustomLink>
+          Haven't solved the invite yet? <CustomLink href="#" onClick={() => setShowHint(true)}><strong>Hint</strong></CustomLink>
         </Subtitle>
-        <SubmitButton variant="contained">
+        <SubmitButton variant="contained" onClick={handleSubmit}>
           SUBMIT
         </SubmitButton>
         <Subtitle variant="body1" style={{ margin: '1em' }}>
-          Already a VIP? <CustomLink href="#">Login</CustomLink>
+          Already a VIP? <CustomLink href="#"><strong>Login</strong></CustomLink>
         </Subtitle>
       </Card>
     </Container>
