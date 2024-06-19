@@ -73,10 +73,10 @@ const theme = createTheme({
             boxShadow: 'none',
           },
           '&:focus': {
-            backgroundColor: '#000000', // Ensure background color stays the same on focus
+            backgroundColor: '#000000',
           },
           '&:active': {
-            backgroundColor: '#000000', // Ensure background color stays the same on active
+            backgroundColor: '#000000',
             boxShadow: 'none',
           },
         },

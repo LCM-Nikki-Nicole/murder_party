@@ -112,7 +112,7 @@ function LandingPage() {
 
   const handleSubmit = async () => {
     console.log("Submitted code:", code.join(''));
-    const response = await fetch('http://localhost:8000/api/validate-code/', {  // Ensure the correct backend URL
+    const response = await fetch('http://localhost:8000/api/validate-code/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ function LandingPage() {
               inputProps={{ maxLength: 1, inputMode: 'numeric', pattern: '[0-9]*' }}
               value={code[index]}
               onChange={(e) => handleChange(e, index)}
-              error={error} // Pass the error state to the component
+              error={error}
             />
           ))}
         </CodeContainer>
