@@ -1,25 +1,37 @@
-from config import PUZZLE_CODE
 from django.views.generic.edit import FormView
-from django.http import HttpResponse
-from .forms import CodeForm
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
+import json
 
 @csrf_exempt
 def get_names(request):
     names = ["NICOLE", "NIKKI", "NICK", "ROB", "MAX", "SIMON", "KEVIN", "IAN", "MARIA", "NAOMI", "JAZZ"]
     return JsonResponse({"names": names})
-class CodeInputView(FormView):
-    template_name = 'code.html'
-    form_class = CodeForm
-    success_url = '/success/'  # URL to redirect to on success
 
-    puzzle_code = PUZZLE_CODE
+@csrf_exempt
+def create_account(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        username = data.get('username')
+        password = data.get('password')
 
-    def form_valid(self, form):
-        code = form.cleaned_data['code']
-        if code == self.puzzle_code:
-            return HttpResponse("Code is correct!")
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({'error': 'Account with this name already exists'}, status=400)
+
+        user = User.objects.create_user(username=username, password=password)
+        user.save()
+        return JsonResponse({'success': 'Account created successfully'}, status=201)
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+@csrf_exempt
+def check_username(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        username = data.get('username')
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({'exists': True})
         else:
-            form.add_error('code', 'The code is incorrect.')
-            return self.form_invalid(form)
+            return JsonResponse({'exists': False})
+    return JsonResponse({'error': 'Invalid request method'}, status=400)

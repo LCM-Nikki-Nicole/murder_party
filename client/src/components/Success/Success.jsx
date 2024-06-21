@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Typography, TextField, Button, Box, Link, MenuItem } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useBackground from '../../hooks/useBackgroundStyles';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -99,8 +100,14 @@ const CustomLink = styled(Link)(({ theme }) => ({
 function Success() {
   const theme = useTheme();
   const Background = useBackground();
+  const navigate = useNavigate();
   const [names, setNames] = useState([]);
   const [selectedName, setSelectedName] = useState('');
+  const [nameExists, setNameExists] = useState(false);
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+  const [formError, setFormError] = useState(false);
 
   useEffect(() => {
     const fetchNames = async () => {
@@ -118,9 +125,63 @@ function Success() {
     fetchNames();
   }, []);
 
-  const handleSubmit = () => {
-    // Handle account creation logic here
-    console.log('Account created for', selectedName);
+  useEffect(() => {
+    const checkUsername = async () => {
+      if (selectedName) {
+        try {
+          const response = await fetch('http://localhost:8000/accounts/check-username/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: selectedName }),
+          });
+          const result = await response.json();
+          setNameExists(result.exists);
+        } catch (error) {
+          console.error('Fetch error:', error);
+        }
+      }
+    };
+    checkUsername();
+  }, [selectedName]);
+
+  const handleSubmit = async () => {
+    let error = false;
+
+    if (!selectedName || !password || !confirmPassword) {
+      setFormError(true);
+      error = true;
+    } else {
+      setFormError(false);
+    }
+
+    if (password !== confirmPassword) {
+      setPasswordError(true);
+      error = true;
+    } else {
+      setPasswordError(false);
+    }
+
+    if (!nameExists && !error) {
+      try {
+        const response = await fetch('http://localhost:8000/accounts/create-account/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username: selectedName, password: password }),
+        });
+
+        if (response.ok) {
+          navigate('/');
+        } else {
+          console.error('Account creation failed');
+        }
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    }
   };
 
   return (
@@ -146,23 +207,42 @@ function Success() {
               </MenuItem>
             ))}
           </InputField>
+          {nameExists && (
+            <Subtitle variant="body1" style={{ color: '#C24949' }}>
+              Account already exists
+            </Subtitle>
+          )}
           <InputField
             label="PASSWORD"
             type="password"
             variant="outlined"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             inputProps={{ style: { textAlign: 'center' } }}
           />
           <InputField
             label="CONFIRM PASSWORD"
             type="password"
             variant="outlined"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
             inputProps={{ style: { textAlign: 'center' } }}
           />
-          <SubmitButton variant="contained" onClick={handleSubmit}>
-            CREATE ACCOUNT
+          {!formError && passwordError && (
+            <Subtitle variant="body1" style={{ color: '#C24949' }}>
+              Passwords do not match
+            </Subtitle>
+          )}
+          {formError && (
+            <Subtitle variant="body1" style={{ color: '#C24949' }}>
+              Please fill out all fields
+            </Subtitle>
+          )}
+          <SubmitButton variant="contained" onClick={handleSubmit} disabled={nameExists}>
+            {nameExists ? '👀' : 'CREATE ACCOUNT'}
           </SubmitButton>
           <Subtitle variant="body1">
-            Already a VIP? <CustomLink href="#"><strong>Login</strong></CustomLink>
+            Already a VIP? <CustomLink href="/Login"><strong>Login</strong></CustomLink>
           </Subtitle>
         </Card>
       </Container>

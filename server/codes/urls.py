@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import CodeInputView, get_names
+from .views import get_names, create_account
 
 urlpatterns = [
-    path('enter-code/', CodeInputView.as_view(), name='code'),
     path('get-names/', get_names, name='get-names'),
+    path('create-account/', create_account, name='create-account'),
 ]
