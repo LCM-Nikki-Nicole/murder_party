@@ -1,4 +1,4 @@
-from config import PUZZLE_CODE, NAZO_CODE
+from config import PUZZLE_CODE
 from django.views.generic.edit import FormView
 from django.http import HttpResponse
 from .forms import CodeForm
@@ -28,7 +28,7 @@ def validate_code(request):
     if request.method == "POST":
         data = json.loads(request.body)
         code = data.get("code")
-        if code == NAZO_CODE:
+        if code == PUZZLE_CODE:
             return JsonResponse({"valid": True})
         return JsonResponse({"valid": False})
     return JsonResponse({"valid": False})
