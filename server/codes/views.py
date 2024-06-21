@@ -2,7 +2,13 @@ from config import PUZZLE_CODE
 from django.views.generic.edit import FormView
 from django.http import HttpResponse
 from .forms import CodeForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
+def get_names(request):
+    names = ["NICOLE", "NIKKI", "NICK", "ROB", "MAX", "SIMON", "KEVIN", "IAN", "MARIA", "NAOMI", "JAZZ"]
+    return JsonResponse({"names": names})
 class CodeInputView(FormView):
     template_name = 'code.html'
     form_class = CodeForm
