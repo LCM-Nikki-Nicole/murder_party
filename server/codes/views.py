@@ -1,8 +1,9 @@
-from django.views.generic.edit import FormView
+from config import PUZZLE_CODE
+from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.models import User
 import json
+
 
 @csrf_exempt
 def get_names(request):
@@ -26,12 +27,20 @@ def create_account(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 @csrf_exempt
-def check_username(request):
+def check_username_exists(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        username = data.get('username')
-        if User.objects.filter(username=username).exists():
-            return JsonResponse({'exists': True})
-        else:
-            return JsonResponse({'exists': False})
-    return JsonResponse({'error': 'Invalid request method'}, status=400)
+        username = data.get('username', '')
+        exists = User.objects.filter(username=username).exists()
+        return JsonResponse({'exists': exists})
+
+
+@csrf_exempt
+def validate_code(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        code = data.get("code")
+        if code == PUZZLE_CODE:
+            return JsonResponse({"valid": True})
+        return JsonResponse({"valid": False})
+    return JsonResponse({"valid": False})
