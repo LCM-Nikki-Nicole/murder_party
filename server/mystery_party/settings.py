@@ -54,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-# might need to update this for netlify later on
+# CSRF and CORS settings
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
@@ -136,9 +136,10 @@ LOGIN_REDIRECT_URL = "code"
 LOGOUT_REDIRECT_URL = "home"
 
 # Session and cookie settings
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Default session engine
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = False  # Set to True in production
+SESSION_COOKIE_SECURE = False  # True in production
+
 
 # Logging configuration
 logging.basicConfig(

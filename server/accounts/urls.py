@@ -1,3 +1,4 @@
+# server/accounts/urls.py
 from django.urls import path
 from .views import create_account, check_username_exists, login_view, check_auth, user_data
 

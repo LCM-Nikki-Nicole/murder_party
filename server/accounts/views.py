@@ -38,7 +38,6 @@ def create_account(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
-
 @csrf_exempt
 def check_username_exists(request):
     if request.method == 'POST':
@@ -51,7 +50,7 @@ def check_username_exists(request):
 def login_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        username = data.get('username')
+        username = data.get('username')  # Ensure correct field is used
         password = data.get('password')
         user = authenticate(request, username=username, password=password)
         if user is not None:

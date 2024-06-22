@@ -135,15 +135,17 @@ function Home() {
       try {
         const response = await fetch('http://localhost:8000/api/user-data/', {
           method: 'GET',
-          credentials: 'include',  // Ensure cookies are included in the request
+          credentials: 'include',  // Include credentials for session management
         });
+
+        console.log('Full response:', response);
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
 
         const data = await response.json();
-        console.log('Fetched user data:', data);  // Add this line for debugging
+        console.log('Fetched user data:', data);  // Debugging
         setUserData(data);
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -152,7 +154,6 @@ function Home() {
 
     fetchUserData();
   }, []);
-
 
   return (
     <Background>

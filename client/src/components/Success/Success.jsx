@@ -174,7 +174,20 @@ function Success() {
         });
 
         if (response.ok) {
-          navigate('/');
+          const loginResponse = await fetch('http://localhost:8000/api/login/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: selectedName, password }),
+            credentials: 'include',
+          });
+
+          if (loginResponse.ok) {
+            navigate('/');
+          } else {
+            console.error('Login after account creation failed');
+          }
         } else {
           console.error('Account creation failed');
         }
@@ -183,7 +196,6 @@ function Success() {
       }
     }
   };
-
 
   return (
     <Background>
