@@ -96,19 +96,19 @@ function Login() {
   }, []);
 
   const handleLogin = async () => {
-    console.log('Login attempted with:', { firstname, password });
     try {
       const response = await fetch('http://localhost:8000/api/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ firstname, password }),
+        body: JSON.stringify({ username: firstname, password }),
+        credentials: 'include',
       });
 
       if (response.ok) {
-        const result = await response.json();
-        if (result.success) {
+        const data = await response.json();
+        if (data.success) {
           navigate('/');
         } else {
           setError(true);
@@ -117,7 +117,7 @@ function Login() {
         setError(true);
       }
     } catch (error) {
-      console.error('Login error:', error);
+      console.error('Error during login:', error);
       setError(true);
     }
   };

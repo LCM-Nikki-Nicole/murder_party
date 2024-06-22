@@ -9,8 +9,6 @@ from django.contrib.auth.decorators import login_required
 def check_auth_status(request):
     return JsonResponse({'authenticated': True})
 
-@csrf_exempt
-def login_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         username = data.get('firstname')
@@ -21,3 +19,8 @@ def login_view(request):
         else:
             return JsonResponse({'success': False, 'error': 'Invalid credentials'}, status=400)
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+@login_required
+def user_data(request):
+    user = request.user
+    return JsonResponse({'first_name': user.first_name})

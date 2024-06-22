@@ -1,6 +1,5 @@
 from config import PUZZLE_CODE
 from django.contrib.auth.models import User
-from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -45,16 +44,3 @@ def validate_code(request):
             return JsonResponse({"valid": True})
         return JsonResponse({"valid": False})
     return JsonResponse({"valid": False})
-
-@csrf_exempt
-def login_view(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        username = data.get('firstname')
-        password = data.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            return JsonResponse({'success': True})
-        else:
-            return JsonResponse({'success': False, 'error': 'Invalid credentials'}, status=400)
-    return JsonResponse({'error': 'Invalid request method'}, status=405)

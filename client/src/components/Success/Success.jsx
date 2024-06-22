@@ -170,7 +170,7 @@ function Success() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ username: selectedName, password: password }),
+          body: JSON.stringify({ username: selectedName, password: password, first_name: selectedName }),
         });
 
         if (response.ok) {
@@ -183,6 +183,7 @@ function Success() {
       }
     }
   };
+
 
   return (
     <Background>

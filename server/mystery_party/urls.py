@@ -1,7 +1,8 @@
+# server/mystery_party/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
-from .views import login_view, check_auth_status
+from accounts.views import login_view, check_auth, user_data  # Import from accounts
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -9,8 +10,8 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("codes/", include("codes.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path('api/', include('codes.urls')),
-    path('api/login/', login_view, name='login'),
-    path('api/check-auth/', check_auth_status, name='check_auth'),
-
-    ]
+    path('api/login/', login_view, name='login'),  # Ensure this points to accounts.login_view
+    path('api/check-auth/', check_auth, name='check_auth'),
+    path('api/user-data/', user_data, name='user-data'),
+    path('api/', include('codes.urls')),  # Keep other API paths after specific ones
+]

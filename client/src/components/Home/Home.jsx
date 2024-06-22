@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography, Box, Paper } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -128,6 +128,31 @@ const Details = styled(Typography)(({ theme }) => ({
 function Home() {
   const theme = useTheme();
   const Background = useBackground();
+  const [userData, setUserData] = useState({ first_name: '' });
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/user-data/', {
+          method: 'GET',
+          credentials: 'include',  // Ensure cookies are included in the request
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        console.log('Fetched user data:', data);  // Add this line for debugging
+        setUserData(data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
 
   return (
     <Background>
@@ -136,7 +161,7 @@ function Home() {
           <Image src="/Bobby-icon.png" alt="Player Icon" />
           <EventTitle>Lights! Camera! Murder!</EventTitle>
           <Typography variant="h6" style={{ position: 'absolute', top: '10px', right: '10px', color: 'white' }}>
-            PLAYER NAME
+            {userData.first_name || 'PLAYER NAME'}
           </Typography>
         </ImageContainer>
         <Card>
