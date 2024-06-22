@@ -132,6 +132,10 @@ function LandingPage() {
     window.location.reload();
   };
 
+  const handleLoginClick = () => {
+    navigate('/Login');
+  };
+
   return (
     <Container>
       <Card>
@@ -169,7 +173,7 @@ function LandingPage() {
           SUBMIT
         </SubmitButton>
         <Subtitle variant="body1" style={{ margin: '1em' }}>
-          Already a VIP? <CustomLink href="#"><strong>Login</strong></CustomLink>
+          Already a VIP? <CustomLink href="#" onClick={handleLoginClick}><strong>Login</strong></CustomLink>
         </Subtitle>
       </Card>
     </Container>

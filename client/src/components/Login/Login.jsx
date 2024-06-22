@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
-import { Typography, TextField, Button, Box } from '@mui/material';
+import { Typography, TextField, Button, Box, MenuItem } from '@mui/material';
 import useBackground from '../../hooks/useBackgroundStyles';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -50,6 +51,10 @@ const InputField = styled(TextField)(({ theme }) => ({
       color: theme.palette.secondary.main,
       textAlign: 'center',
     },
+    '& .MuiSelect-select': {
+      color: theme.palette.secondary.main,
+      textAlign: 'center',
+    },
   },
   '& .MuiInputLabel-root': {
     color: theme.palette.secondary.main,
@@ -68,12 +73,53 @@ const LoginButton = styled(Button)(({ theme }) => ({
 
 function Login() {
   const Background = useBackground();
+  const navigate = useNavigate();
   const [firstname, setFirstname] = useState('');
   const [password, setPassword] = useState('');
+  const [names, setNames] = useState([]);
+  const [error, setError] = useState(false);
 
-  const handleLogin = () => {
-    // TODO: Handle login logic here
+  useEffect(() => {
+    const fetchNames = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/get-names/');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setNames(data.names);
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    };
+    fetchNames();
+  }, []);
+
+  const handleLogin = async () => {
     console.log('Login attempted with:', { firstname, password });
+    try {
+      const response = await fetch('http://localhost:8000/api/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstname, password }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          navigate('/');
+        } else {
+          setError(true);
+        }
+      } else {
+        setError(true);
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      setError(true);
+    }
   };
 
   return (
@@ -83,11 +129,18 @@ function Login() {
           <Title>WELCOME BACK, VIP SLEUTH</Title>
           <Subtitle>Access your invite info and character files here.</Subtitle>
           <InputField
+            select
             label="FIRSTNAME"
             variant="outlined"
             value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
-          />
+          >
+            {names.map((name) => (
+              <MenuItem key={name} value={name} style={{ textAlign: 'center' }}>
+                {name}
+              </MenuItem>
+            ))}
+          </InputField>
           <InputField
             label="PASSWORD"
             type="password"
@@ -95,6 +148,11 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {error && (
+            <Subtitle variant="body1" style={{ color: '#C24949' }}>
+              Incorrect first name or password. Please try again.
+            </Subtitle>
+          )}
           <LoginButton variant="contained" onClick={handleLogin}>
             LOGIN
           </LoginButton>
