@@ -125,10 +125,22 @@ const Details = styled(Typography)(({ theme }) => ({
   gap: '0.5em', // Add some spacing between the icon and text (where has this been all my life)
 }));
 
+const StyledLink = styled('a')(({ theme }) => ({
+  color: 'inherit',
+  textDecoration: 'underline',
+}));
+
 function Home() {
   const theme = useTheme();
   const Background = useBackground();
-  const [userData, setUserData] = useState({ first_name: '' });
+  const [userData, setUserData] = useState({
+    first_name: '',
+    character_first_name: '',
+    character_last_name: '',
+    profession: '',
+    image: '',
+    pdf: ''
+  });
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -155,11 +167,12 @@ function Home() {
     fetchUserData();
   }, []);
 
+
   return (
     <Background>
       <Container>
         <ImageContainer>
-          <Image src="/Bobby-icon.png" alt="Player Icon" />
+          <Image src={`http://localhost:8000/static/images/${userData.character_first_name}-icon.png`} alt="Player Icon" />
           <EventTitle>Lights! Camera! Murder!</EventTitle>
           <Typography variant="h6" style={{ position: 'absolute', top: '10px', right: '10px', color: 'white' }}>
             {userData.first_name || 'PLAYER NAME'}
@@ -168,7 +181,10 @@ function Home() {
         <Card>
           <EventDetails>
             <Details variant="body2">
-              <LocationOnIcon /> 470 シェアスペLuxury新宿
+              <LocationOnIcon />
+              <StyledLink href='https://maps.app.goo.gl/xDgdk7da9fGHccpGA' target="_blank" rel="noopener noreferrer">
+                470 シェアスペLuxury新宿
+              </StyledLink>
             </Details>
             <Details variant="body2">
               <EventIcon /> Sat, July 6th <AccessTimeIcon /> 17:45
@@ -178,11 +194,11 @@ function Home() {
             </Typography>
           </EventDetails>
           <CharacterSection>
-            <CharacterName style={{ color: theme.palette.secondary.main }}>Character Name</CharacterName>
-            <CharacterProfession style={{ fontFamily: 'Palanquin Dark' }}>Profession</CharacterProfession>
+            <CharacterName style={{ color: theme.palette.secondary.main }}>{userData.character_first_name} {userData.character_last_name}</CharacterName>
+            <CharacterProfession style={{ fontFamily: 'Palanquin Dark' }}>{userData.profession}</CharacterProfession>
             <ButtonContainer>
               <CharacterFiles>
-                <a href="/Story.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="http://localhost:8000/static/pdfs/Story.pdf" target="_blank" rel="noopener noreferrer">
                   <ActionButton variant="contained">
                     <AutoStoriesIcon style={{ fontSize: '3em' }} />
                   </ActionButton>
@@ -190,9 +206,11 @@ function Home() {
                 <ActionLabel>Story</ActionLabel>
               </CharacterFiles>
               <CharacterFiles>
-                <ActionButton variant="contained">
-                  <PsychologyAltIcon style={{ fontSize: '2.5em', textAlign: 'center' }} />
-                </ActionButton>
+                <a href={`http://localhost:8000/static/pdfs/${userData.character_first_name}.pdf`} target="_blank" rel="noopener noreferrer">
+                  <ActionButton variant="contained">
+                    <PsychologyAltIcon style={{ fontSize: '2.5em', textAlign: 'center' }} />
+                  </ActionButton>
+                </a>
                 <ActionLabel>Character <br /> Info</ActionLabel>
               </CharacterFiles>
               <CharacterFiles>
