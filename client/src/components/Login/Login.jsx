@@ -152,7 +152,7 @@ function Login() {
           />
           {error && (
             <Subtitle variant="body1" style={{ color: '#C24949' }}>
-              Incorrect first name or password. Please try again.
+              Incorrect first name or password. Please try again. <br/> (Let Nicole know if you forgot your password lol)
             </Subtitle>
           )}
           <LoginButton variant="contained" onClick={handleLogin}>
