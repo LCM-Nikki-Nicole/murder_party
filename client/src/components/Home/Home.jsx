@@ -2,128 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography, Box, Paper } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import CheckroomIcon from '@mui/icons-material/Checkroom';
 import useBackground from '../../hooks/useBackgroundStyles';
-import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
-import EventIcon from '@mui/icons-material/Event';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-
-const Container = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '2em',
-  flexDirection: 'column',
-}));
-
-const Card = styled(Paper)(({ theme }) => ({
-  textAlign: 'center',
-  color: theme.palette.secondary.main,
-  maxWidth: '25em',
-  width: '100%',
-  backgroundColor: theme.palette.custom.red,
-  boxShadow: 'none'
-}));
-
-const ImageContainer = styled(Box)(({ theme }) => ({
-  position: 'relative',
-  marginBottom: '1em',
-  width: '28%',
-  [theme.breakpoints.down('sm')]: {
-    width: '100vw',
-  },
-}));
-
-const Image = styled('img')({
-  width: '100%',
-  height: 'auto',
-});
-
-const EventDetails = styled(Box)(({ theme }) => ({
-  textAlign: 'left',
-  marginBottom: '1em',
-  backgroundColor: theme.palette.custom.red,
-  padding: '1em',
-}));
-
-const EventTitle = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Palanquin Dark',
-  width: '17em',
-  position: 'absolute',
-  bottom: '-1.1em',
-  left: '50%',
-  transform: 'translateX(-50%)',
-  backgroundColor: theme.palette.custom.darkRed,
-  padding: '.75em',
-  borderRadius: '.5em',
-  color: theme.palette.secondary.main,
-  textAlign: 'center'
-}));
-
-const CharacterSection = styled(Box)(({ theme }) => ({
-  marginTop: '1em',
-  textAlign: 'center',
-  backgroundColor: theme.palette.custom.darkRed,
-  padding: '1em',
-  borderRadius: '.75em',
-}));
-
-const CharacterName = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h5,
-  color: theme.palette.custom.gold,
-}));
-
-const CharacterProfession = styled(Typography)(({ theme }) => ({
-  color: theme.palette.custom.gold,
-  marginBottom: '1em',
-}));
-
-const ButtonContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-around',
-  marginTop: '1em',
-}));
-
-const CharacterFiles = styled(Box)(({ theme }) => ({
-  textAlign: 'center',
-  wordWrap: 'break',
-}));
-
-const ActionButton = styled(Box)(({ theme }) => ({
-  height: '5em',
-  width: '5em',
-  borderRadius: '.5em',
-  color: theme.palette.custom.gold,
-  backgroundColor: theme.palette.secondary.main,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column',
-  '&:hover': {
-    backgroundColor: theme.palette.custom.darkGray,
-  },
-  '&:focus': {
-    backgroundColor: theme.palette.custom.darkGray,
-  },
-  '&:active': {
-    backgroundColor: theme.palette.custom.darkGray,
-  },
-}));
-
-const ActionLabel = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Palanquin Dark',
-  color: theme.palette.secondary.main,
-  marginTop: '0.5em',
-}));
-
-const Details = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Palanquin Dark',
-  display: 'flex',
-  alignItems: 'center',
-  gap: '0.5em', // Add some spacing between the icon and text (where has this been all my life)
-}));
 
 const StyledLink = styled('a')(({ theme }) => ({
   color: 'inherit',
@@ -227,6 +106,6 @@ function Home() {
       </Container>
     </Background>
   );
-}
+};
 
 export default Home;

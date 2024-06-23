@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 
 
+
 @csrf_exempt
 def get_names(request):
     names = ["Nicole", "Michelle", "Maria", "Naomi", "Lexi", "Ian", "Nick", "Kevin", "Nikki", "McK", "Jazz", "Peter", "Rob", "Max", "Simon"]
@@ -17,7 +18,6 @@ def check_username_exists(request):
         username = data.get('username', '')
         exists = User.objects.filter(username=username).exists()
         return JsonResponse({'exists': exists})
-
 
 @csrf_exempt
 def validate_code(request):
