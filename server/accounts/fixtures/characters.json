@@ -1,0 +1,182 @@
+[
+  {
+      "model": "accounts.characterprofile",
+      "pk": 1,
+      "fields": {
+          "character_first_name": "Dana",
+          "character_last_name": "Darling",
+          "profession": "Hollywood Diva",
+          "image": "characters/images/Dana-icon.png",
+          "pdf": "characters/pdfs/Dana.pdf",
+          "player_name": "Nicole"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 2,
+      "fields": {
+          "character_first_name": "Angel",
+          "character_last_name": "Wood",
+          "profession": "Actress",
+          "image": "characters/images/Angel-icon.png",
+          "pdf": "characters/pdfs/Angel.pdf",
+          "player_name": "Michelle"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 3,
+      "fields": {
+          "character_first_name": "Jada",
+          "character_last_name": "Broken",
+          "profession": "Actress",
+          "image": "characters/images/Jada-icon.png",
+          "pdf": "characters/pdfs/Jada.pdf",
+          "player_name": "Maria"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 4,
+      "fields": {
+          "character_first_name": "Natasha",
+          "character_last_name": "Gibson",
+          "profession": "Young Actress",
+          "image": "characters/images/Natasha-icon.png",
+          "pdf": "characters/pdfs/Natasha.pdf",
+          "player_name": "Naomi"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 5,
+      "fields": {
+          "character_first_name": "Lola",
+          "character_last_name": "Talent",
+          "profession": "Latin Diva",
+          "image": "characters/images/Lola-icon.png",
+          "pdf": "characters/pdfs/Lola.pdf",
+          "player_name": "Lexi"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 6,
+      "fields": {
+          "character_first_name": "Mario",
+          "character_last_name": "Talent",
+          "profession": "Aspiring Actor",
+          "image": "characters/images/Mario-icon.png",
+          "pdf": "characters/pdfs/Mario.pdf",
+          "player_name": "Ian"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 7,
+      "fields": {
+          "character_first_name": "Bobby",
+          "character_last_name": "Calling",
+          "profession": "Casting Director",
+          "image": "characters/images/Bobby-icon.png",
+          "pdf": "characters/pdfs/Bobby.pdf",
+          "player_name": "Kevin"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 8,
+      "fields": {
+          "character_first_name": "Penelope",
+          "character_last_name": "Hughes",
+          "profession": "Director's wife",
+          "image": "characters/images/Penelope-icon.png",
+          "pdf": "characters/pdfs/Penelope.pdf",
+          "player_name": "Nikki"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 9,
+      "fields": {
+          "character_first_name": "Princess",
+          "character_last_name": "Pop",
+          "profession": "Pop Star",
+          "image": "characters/images/Princess-icon.png",
+          "pdf": "characters/pdfs/Princess.pdf",
+          "player_name": "McK"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 10,
+      "fields": {
+          "character_first_name": "Brady",
+          "character_last_name": "Comeback",
+          "profession": "Pop Star",
+          "image": "characters/images/Brady-icon.png",
+          "pdf": "characters/pdfs/Brady.pdf",
+          "player_name": "Jazz"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 11,
+      "fields": {
+          "character_first_name": "Hunter",
+          "character_last_name": "Starr",
+          "profession": "Pop Star & Aspiring Actor",
+          "image": "characters/images/Hunter-icon.png",
+          "pdf": "characters/pdfs/Hunter.pdf",
+          "player_name": "Peter"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 12,
+      "fields": {
+          "character_first_name": "MC",
+          "character_last_name": "Award",
+          "profession": "Award Show Emcee",
+          "image": "characters/images/MC-icon.png",
+          "pdf": "characters/pdfs/MC.pdf",
+          "player_name": "Rob"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 13,
+      "fields": {
+          "character_first_name": "T",
+          "character_last_name": "Redd",
+          "profession": "Aspiring Rap Artist",
+          "image": "characters/images/T-icon.png",
+          "pdf": "characters/pdfs/TRedd.pdf",
+          "player_name": "Max"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 14,
+      "fields": {
+          "character_first_name": "Ward",
+          "character_last_name": "Winner",
+          "profession": "President of the Academy",
+          "image": "characters/images/Ward-icon.png",
+          "pdf": "characters/pdfs/Ward.pdf",
+          "player_name": "Simon"
+      }
+  },
+  {
+      "model": "accounts.characterprofile",
+      "pk": 15,
+      "fields": {
+          "character_first_name": "Hobart",
+          "character_last_name": "Hughes",
+          "profession": "Director",
+          "image": "characters/images/Hobart-icon.png",
+          "pdf": "characters/pdfs/Hobart.pdf",
+          "player_name": "Nick"
+      }
+  }
+]
