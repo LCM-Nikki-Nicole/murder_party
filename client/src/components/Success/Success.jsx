@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography, TextField, Button, Box, Link, MenuItem } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 import useBackground from '../../hooks/useBackgroundStyles';
 import { useNavigate } from 'react-router-dom';
 
@@ -98,7 +98,7 @@ const CustomLink = styled(Link)(({ theme }) => ({
 }));
 
 function Success() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const Background = useBackground();
   const navigate = useNavigate();
   const [names, setNames] = useState([]);
