@@ -97,30 +97,32 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/login/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username: firstname, password }),
-        credentials: 'include',
-      });
+        const response = await fetch('http://localhost:8000/api/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: firstname, password }),
+            credentials: 'include',
+        });
 
-      if (response.ok) {
-        const data = await response.json();
-        if (data.success) {
-          navigate('/');
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
+                navigate('/');
+            } else {
+                console.error('Login failed:', data.error);
+                setError(true);
+            }
         } else {
-          setError(true);
+            console.error('Login failed');
+            setError(true);
         }
-      } else {
-        setError(true);
-      }
     } catch (error) {
-      console.error('Error during login:', error);
-      setError(true);
+        console.error('Error during login:', error);
+        setError(true);
     }
-  };
+};
 
   return (
     <Background>
@@ -130,7 +132,7 @@ function Login() {
           <Subtitle>Access your invite info and character files here.</Subtitle>
           <InputField
             select
-            label="FIRSTNAME"
+            label="FIRST NAME"
             variant="outlined"
             value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
