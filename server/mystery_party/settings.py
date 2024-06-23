@@ -13,10 +13,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import logging
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-k(e3418#kl_-ku^j2+nmk7$b#u=@yq^a$y_7tzw87)+#ned9a1"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['murder-party-8558ae35be77.herokuapp.com']
 
 # Application definition
 
@@ -41,12 +40,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts",
     "codes",
-    "corsheaders"
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Add WhiteNoise middleware for static file serving
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -56,9 +56,9 @@ MIDDLEWARE = [
 ]
 
 # CSRF and CORS settings
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://murder-party-8558ae35be77.herokuapp.com']
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://murder-party-8558ae35be77.herokuapp.com']
 
 ROOT_URLCONF = "mystery_party.urls"
 
@@ -80,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "mystery_party.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -90,7 +89,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -110,7 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -122,11 +119,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = "/static/"
+
 # Add these lines to define the static files directory
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "mystery_party/static"),
@@ -134,9 +130,6 @@ STATICFILES_DIRS = [
 
 # Ensure that the STATIC_ROOT is defined for the collectstatic command
 STATIC_ROOT = os.path.join(BASE_DIR, 'mystery_party/staticfiles')
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -157,11 +150,13 @@ LOGOUT_REDIRECT_URL = "home"
 # Session and cookie settings
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = False  # True in production
-
+SESSION_COOKIE_SECURE = not DEBUG  # True in production
 
 # Logging configuration
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s %(levelname)s %(message)s',
 )
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
