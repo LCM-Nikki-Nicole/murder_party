@@ -1,8 +1,6 @@
 from django.urls import path
-from .views import get_names
-from .views import validate_code
+from .views import CodeInputView
 
 urlpatterns = [
-    path('get-names/', get_names, name='get-names'),
-    path('validate-code/', validate_code, name='validate-code'),
+    path('enter-code/', CodeInputView.as_view(), name='code'),
 ]
