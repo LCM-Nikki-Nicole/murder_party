@@ -17,11 +17,15 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/server/static/$1"
+      "dest": "/client/build/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/$1"
+      "dest": "/client/build/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/$1"
     }
   ]
 }
