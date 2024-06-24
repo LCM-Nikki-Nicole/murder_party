@@ -8,10 +8,7 @@
     },
     {
       "src": "server/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -20,12 +17,12 @@
       "dest": "/client/build/static/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/client/build/$1"
-    },
-    {
       "src": "/api/(.*)",
       "dest": "/server/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/build/$1"
     }
   ]
 }
