@@ -11,9 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import logging
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +25,7 @@ SECRET_KEY = "django-insecure-k(e3418#kl_-ku^j2+nmk7$b#u=@yq^a$y_7tzw87)+#ned9a1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['murder-party-8558ae35be77.herokuapp.com']
+ALLOWED_HOSTS = ['your-vercel-domain.vercel.app']  # Replace with your Vercel domain
 
 # Application definition
 
@@ -56,9 +54,9 @@ MIDDLEWARE = [
 ]
 
 # CSRF and CORS settings
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://murder-party-8558ae35be77.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://your-vercel-domain.vercel.app']  # Replace with your Vercel domain
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://murder-party-8558ae35be77.herokuapp.com']
+CORS_ORIGIN_WHITELIST = ['https://your-vercel-domain.vercel.app']  # Replace with your Vercel domain
 
 ROOT_URLCONF = "mystery_party.urls"
 
@@ -158,5 +156,4 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s %(message)s',
 )
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+# Remove Django-Heroku settings

@@ -1,1 +1,1 @@
-web: gunicorn server.mystery_party.wsgi --log-file -
+web: gunicorn server.mystery_party.wsgi:application --log-file -
