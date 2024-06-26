@@ -13,14 +13,14 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/client/build/static/$1"
-    },
+    "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/server/$1"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/client/build/static/$1"
     },
     {
       "src": "/(.*)",
